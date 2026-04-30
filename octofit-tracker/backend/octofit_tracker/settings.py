@@ -31,6 +31,7 @@ codespace_name = os.environ.get('CODESPACE_NAME')
 allowed_hosts = ['localhost', '127.0.0.1']
 if codespace_name:
     allowed_hosts.append(f"{codespace_name}-8000.app.github.dev")
+    allowed_hosts.append(codespace_name)
 ALLOWED_HOSTS = allowed_hosts
 
 
@@ -75,10 +76,6 @@ DATABASES = {
         'CLIENT': {
             'host': 'localhost',
             'port': 27017,
-            'username': '',
-            'password': '',
-            'authSource': 'admin',
-            'authMechanism': 'SCRAM-SHA-1',
         },
     }
 }
@@ -91,10 +88,11 @@ DATABASES = {
         'CLIENT': {
             'host': 'localhost',
             'port': 27017,
-            'username': '',
-            'password': '',
-            'authSource': 'admin',
-            'authMechanism': 'SCRAM-SHA-1',
+            # Usuń username i password jeśli nie są wymagane
+            # 'username': '',
+            # 'password': '',
+            # 'authSource': 'admin',
+            # 'authMechanism': 'SCRAM-SHA-1',
         }
     }
 }
