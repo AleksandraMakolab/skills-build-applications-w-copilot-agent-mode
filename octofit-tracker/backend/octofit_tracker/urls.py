@@ -32,7 +32,10 @@ def api_root_with_codespace(request):
     # Przekazujemy zmienną do oryginalnego api_root, jeśli obsługuje request
     response = views.api_root(request)
     # Dodajemy do odpowiedzi URL-e z dynamicznym hostem
-    base_url = f"https://{codespace_name}-8000.app.github.dev/api/"
+    if codespace_name == 'localhost':
+        base_url = f"http://localhost:8000/api/"
+    else:
+        base_url = f"https://{codespace_name}-8000.app.github.dev/api/"
     if hasattr(response, 'data'):
         # Przykład: dodajemy pole 'api_base_url' do odpowiedzi
         response.data['api_base_url'] = base_url
