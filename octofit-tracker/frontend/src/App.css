@@ -1,0 +1,118 @@
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f0ff 0%, #f9e6ff 100%);
+  color: #2d2d2d;
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 60px;
+  margin-right: 16px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background: #6f42c1;
+  color: #fff;
+  padding: 2rem 0;
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.App-link, .navbar .nav-link, .navbar-brand {
+  color: #6f42c1 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.App-link:hover, .navbar .nav-link:hover, .navbar-brand:hover {
+  color: #d63384 !important;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #e3f0ff 0%, #f9e6ff 100%) !important;
+  border-bottom: 2px solid #6f42c1;
+}
+
+.table {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(111,66,193,0.07);
+}
+.table th {
+  background: #f3e8ff;
+  color: #6f42c1;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9e6ff;
+}
+
+.btn, .btn-primary {
+  background: #6f42c1;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+.btn:hover, .btn-primary:hover {
+  background: #d63384;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.card {
+  border: 1px solid #e3f0ff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(111,66,193,0.07);
+}
+
+/* Modal custom styles */
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-header {
+  background: #f3e8ff;
+  color: #6f42c1;
+}
+.modal-footer {
+  background: #f9e6ff;
+}
+
+/* Form custom styles */
+.form-control:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 0.2rem rgba(111,66,193,0.15);
+}
+
+/* Logo left alignment in navbar */
+.octofit-logo {
+  height: 48px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
